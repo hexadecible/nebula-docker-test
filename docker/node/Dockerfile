@@ -10,5 +10,5 @@ RUN npm install sodium-native
 RUN npm install --quiet
 COPY . .
 
-ENTRYPOINT ["/bin/node"]
+ENTRYPOINT ["/usr/bin/node"]
 CMD ["npm", "run", "start"]
