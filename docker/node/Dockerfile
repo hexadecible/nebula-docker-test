@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:15-alpine
 
 RUN apk --update add --no-cache curl git python alpine-sdk \
   bash autoconf libtool automake
@@ -8,7 +8,7 @@ RUN apk update
 RUN apk upgrade
 RUN apk add bash
 
-WORKDIR /usr/app
+WORKDIR /opt/nebula-docker-test
 COPY package.json .
 RUN npm install sodium-native
 RUN npm install --quiet
