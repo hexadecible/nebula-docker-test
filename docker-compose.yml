@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    command: npm run start
+    volumes:
+      - .:/opt/docker-drive/
+      - /opt/docker-drive/node_modules
+    network_mode: host
+    env_file:
+      - .env

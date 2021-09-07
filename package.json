@@ -1,0 +1,16 @@
+{
+  "name": "docker-nebula",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@telios/nebula-drive": "^1.0.5",
+    "nodemon": "^2.0.12"
+  }
+}
