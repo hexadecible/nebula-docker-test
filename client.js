@@ -21,14 +21,14 @@ const ipc = require('hyper-ipc')('somesupersecrettopic');
     await drive.writeFile('/test_file.txt', readStream);
   }
 
-  ipc.serve('addPeer', async (query, callback) => {
-    console.log('ADDING PEER...');
+  ipc.serve('addServerPeer', async (query, callback) => {
+    console.log('ADDING SERVER PEER...');
     await drive.addPeer(query.toString());
 
-    ipc.run('addPeer', drive.diffFeedKey, (err, data) => {
+    ipc.run('addClientPeer', drive.diffFeedKey, (err, data) => {
       if (err) return console.error(err);
 
-      console.log('PEER ADDED');
+      console.log('CLIENT PEER ADDED');
     });
 
     callback(null, 'done');

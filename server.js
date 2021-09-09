@@ -20,17 +20,17 @@ const ipc = require('hyper-ipc')('somesupersecrettopic');
 
   await drive.ready();
 
-  ipc.serve('addPeer', async (query, callback) => {
-    console.log('ADDING PEER...');
+  ipc.serve('addClientPeer', async (query, callback) => {
+    console.log('ADDING CLIENT PEER...');
     await drive.addPeer(query.toString());
 
     callback(null, 'done');
   });
 
-  ipc.run('addPeer', drive.diffFeedKey, (err, data) => {
-    if (err) return console.error(err);
+  ipc.run('addServerPeer', drive.diffFeedKey, (err, data) => {
+    if (err) return console.log(err);
 
-    console.log('PEER ADDED');
+    console.log('SERVER ADDED');
   });
 
   console.log('Public Key ==> ', drive.publicKey);
