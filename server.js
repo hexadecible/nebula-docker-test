@@ -4,7 +4,7 @@ const ipc = require('hyper-ipc')('somesupersecrettopic');
 
 (async () => {
   const keyPair = DHT.keyPair();
-  const peerKey = '28b351530a5030fb8ba8fa8d075451eb81518d2ae095fbe18672eec5d14051c8';
+  const peerKey = '';
 
   const drive = new Drive(__dirname + "/server_drive", peerKey, {
     keyPair,
