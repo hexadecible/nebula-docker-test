@@ -9,5 +9,3 @@ services:
     volumes:
       - .:/opt/docker-drive/
     network_mode: host
-    env_file:
-      - .env
