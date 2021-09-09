@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2-runtime start ecosystem.config.js --env production"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@telios/nebula-drive": "^1.0.5",
-    "nodemon": "^2.0.12",
-    "pm2": "^5.1.1"
+    "@telios/nebula-drive": "^1.0.6"
   }
 }
