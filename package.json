@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@telios/nebula-drive": "^1.0.6"
+    "@telios/nebula-drive": "^1.0.6",
+    "hyper-ipc": "^1.1.2"
   }
 }

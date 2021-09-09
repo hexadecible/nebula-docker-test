@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: ./docker/node/Dockerfile
-    command: npm run start
+    command: npm run server
     volumes:
       - .:/opt/docker-drive/
     network_mode: host
