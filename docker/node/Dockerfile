@@ -15,4 +15,4 @@ RUN npm install sodium-native
 RUN npm install --quiet
 COPY . .
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "server"]
