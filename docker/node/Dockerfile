@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
   bash \
   autoconf \
   automake \
-  libtool \
+  libtool
 
 WORKDIR /opt/nebula-docker-test
 
@@ -15,4 +15,4 @@ RUN npm install sodium-native
 RUN npm install --quiet
 COPY . .
 
-CMD ["node", "index.js"]
+CMD ["npm", "run", "start"]
